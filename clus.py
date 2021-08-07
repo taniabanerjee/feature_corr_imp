@@ -102,8 +102,8 @@ def plot_orig_clusters(df):
     plt.grid(b=True, which='major', color='#666666', linestyle='-')
     plt.minorticks_on()
     plt.grid(b=True, which='minor', color='#999999', linestyle='-', alpha=0.2)
-    plt.show()
     missedStats(df, cluster_map)
+    plt.show()
     return
 
 def missedStats(df, cluster_map):
@@ -235,8 +235,8 @@ def plot_complex(df, classes, n_clusters):
     cluster_map = getMap(df, classes)
     fig, ax = plt.subplots()
     get_sorted_cid_and_plot(df, fig, ax, n_clusters, cluster_map)
-    plt.show()
     missedStats(df, cluster_map)
+    plt.show()
     return
 
 def channel_flow():
@@ -251,11 +251,11 @@ def channel_flow():
 
     classes = [1, 2, 3, 4, 5]
     df['cluster.ID.new'] = df['cluster.ID'] - 1
-#    plot_orig_clusters(df)
-#    plotdf1 = findClusters(df, features1, classes, True)
-#    plot_orig_clusters(df)
-#    plotdf2 = findClusters(df, features2, classes, True)
-#    plot_orig_clusters(df)
+    plot_orig_clusters(df)
+    plotdf1 = findClusters(df, features1, classes, True)
+    plot_orig_clusters(df)
+    plotdf2 = findClusters(df, features2, classes, True)
+    plot_orig_clusters(df)
     plotdf3 = findClusters(df, features3, classes, True)
     plot_orig_clusters(df)
     plotdf4 = findClusters(df, features4, classes, False)
@@ -291,11 +291,11 @@ def wavy_wall():
     classes = [6, 7, 8, 9, 10]
     print ('wavy wall')
     ccdf['cluster.ID.new'] = cdf['cluster.ID']
-#    plot_complex(ccdf, classes, 10)
-#    ypred1 = findClusters(ccdf, features1, classes, True)
-#    plot_complex(ccdf, classes, 10)
-#    plotdf2 = findClusters(ccdf, features2, classes, True)
-#    plot_complex(ccdf, classes, 10)
+    plot_complex(ccdf, classes, 10)
+    ypred1 = findClusters(ccdf, features1, classes, True)
+    plot_complex(ccdf, classes, 10)
+    plotdf2 = findClusters(ccdf, features2, classes, True)
+    plot_complex(ccdf, classes, 10)
     plotdf3 = findClusters(ccdf, features3, classes, True)
     plot_complex(ccdf, classes, 10)
     plotdf4 = findClusters(ccdf, features4, classes, True)
@@ -333,11 +333,11 @@ def channel_with_bump():
     classes = [11, 12, 13, 14, 15, 16]
     print ('channel flow with bump')
     ccdf['cluster.ID.new'] = cdf['cluster.ID']
-#    plot_complex(ccdf, classes, 11)
-#    ypred1 = findClusters(ccdf, features1, classes, True)
-#    plot_complex(ccdf, classes, 11)
-#    plotdf2 = findClusters(ccdf, features2, classes, True)
-#    plot_complex(ccdf, classes, 11)
+    plot_complex(ccdf, classes, 11)
+    ypred1 = findClusters(ccdf, features1, classes, True)
+    plot_complex(ccdf, classes, 11)
+    plotdf2 = findClusters(ccdf, features2, classes, True)
+    plot_complex(ccdf, classes, 11)
     plotdf3 = findClusters(ccdf, features3, classes, True)
     plot_complex(ccdf, classes, 11)
     plotdf4 = findClusters(ccdf, features4, classes, False)
@@ -380,11 +380,11 @@ def square_cyl():
     classes = [17, 18, 19]
     print ('square cylinder')
     ccdf['cluster.ID.new'] = cdf['cluster.ID']
-#    plot_complex(ccdf, classes, 16)
-#    ypred1 = findClusters(ccdf, features1, classes, True)
-#    plot_complex(ccdf, classes, 16)
-#    plotdf2 = findClusters(ccdf, features2, classes, True)
-#    plot_complex(ccdf, classes, 16)
+    plot_complex(ccdf, classes, 16)
+    ypred1 = findClusters(ccdf, features1, classes, True)
+    plot_complex(ccdf, classes, 16)
+    plotdf2 = findClusters(ccdf, features2, classes, True)
+    plot_complex(ccdf, classes, 16)
     plotdf3 = findClusters(ccdf, features3, classes, True)
     plot_complex(ccdf, classes, 16)
     plotdf4 = findClusters(ccdf, features4, classes, False)
